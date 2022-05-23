@@ -24,7 +24,8 @@
                 <ul>
                     <li class="todo" v-for="(elm, index) in todo"> 
                         <div :class="{done : elm.done}" @click="elm.done = !elm.done">{{elm.text}}</div>
-                        <i class="fa-solid fa-xmark" @click="removeTodo(index)"></i>
+                        <i v-if="!elm.done" class="fa-solid fa-xmark" :class="{red : !elm.done}" @click="removeTodo(index)"></i>
+                        <i v-else class="fa-solid fa-check" :class="{green : elm.done}" @click="removeTodo(index)"></i>
                     </li>
                 </ul>
             </div>

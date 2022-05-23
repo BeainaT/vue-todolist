@@ -4,6 +4,20 @@
     margin: 0;
     box-sizing: border-box;
 }
+body {
+    background-color: #5907f1;
+    color: #f1b307;
+    font-family: sans-serif;
+}
+h1 {
+    text-transform: uppercase;
+}
+h1,
+form {
+    text-align: center;
+    margin: 0.5em auto;
+}
+
 #container {
     max-width: 500px;
     margin: auto;
@@ -14,5 +28,11 @@
 }
 .done {
     text-decoration: line-through;
+}
+.red {
+    color: #eb3434;
+}
+.green {
+    color: #5ae747;
 }
 
