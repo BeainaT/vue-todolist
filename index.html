@@ -17,9 +17,9 @@
         </header>
         <main>
             <div id="container">
-                <form>
-                    <input type="text">
-                    <button>Aggiungi</button>
+                <form @submit.prevent="addTodo()">
+                    <input type="text" placeholder="Cosa vuoi o devi fare?" v-model="target"/>
+                    <button type="submit">Aggiungi</button>
                 </form>
                 <ul>
                     <li class="todo" v-for="(elm, index) in todo" :class="{done : elm.done}">{{elm.text}}<i class="fa-solid fa-xmark" @click="removeTodo(index)"></i></li>

@@ -33,10 +33,19 @@ const app = new Vue({
                 done: true,
             },
         ],
+        target: "",
+
     },
     methods: {
+        addTodo() {
+            if(this.target !== "") {
+                elm = {"text": this.target};
+                this.todo.push(elm);
+                this.target = "";
+            }
+        },
         removeTodo(index) {
             this.todo.splice(index, 1);
         },
-    }
+    },
 });
