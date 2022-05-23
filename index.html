@@ -18,7 +18,7 @@
         <main>
             <div id="container">
                 <form @submit.prevent="addTodo()">
-                    <input type="text" placeholder="Cosa vuoi o devi fare?" v-model="target"/>
+                    <input type="text" placeholder="Cosa vuoi o devi fare?" v-model="target" required>
                     <button type="submit">Aggiungi</button>
                 </form>
                 <ul v-if="todo.length > 0">

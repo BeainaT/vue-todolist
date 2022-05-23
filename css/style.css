@@ -13,7 +13,8 @@ body {
     font-family: sans-serif;
 }
 body,
-button {
+button,
+input {
     color: var(--primary_color);
 }
 h1 {
