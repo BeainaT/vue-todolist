@@ -4,6 +4,17 @@
     margin: 0;
     box-sizing: border-box;
 }
+#container {
+    max-width: 500px;
+    margin: auto;
+}
+.todo {
+    display: flex;
+    justify-content: space-between;
+}
 .done {
     text-decoration: line-through;
+}
+.icon {
+    text-decoration: none;
 }
