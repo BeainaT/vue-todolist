@@ -39,7 +39,7 @@ const app = new Vue({
     methods: {
         addTodo() {
             if(this.target !== "") {
-                elm = {"text": this.target};
+                elm = {"text": this.target, "done": false};
                 this.todo.push(elm);
                 this.target = "";
             }

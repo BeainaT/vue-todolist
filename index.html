@@ -22,7 +22,7 @@
                     <button type="submit">Aggiungi</button>
                 </form>
                 <ul>
-                    <li class="todo" v-for="(elm, index) in todo" :class="{done : elm.done}">{{elm.text}}<i class="fa-solid fa-xmark" @click="removeTodo(index)"></i></li>
+                    <li class="todo" v-for="(elm, index) in todo" :class="{done : elm.done}" @click="elm.done = !elm.done">{{elm.text}}<i class="fa-solid fa-xmark" @click="removeTodo(index)"></i></li>
                 </ul>
             </div>
         </main>
