@@ -4,14 +4,25 @@
     margin: 0;
     box-sizing: border-box;
 }
+:root {
+    --primary_color: #f1b307;
+}
+/*TYPO*/
 body {
     background-color: #242425;
-    color: #f1b307;
     font-family: sans-serif;
+}
+body,
+button {
+    color: var(--primary_color);
 }
 h1 {
     text-transform: uppercase;
 }
+ul li {
+    cursor:default;
+}
+/*COMMONS*/
 h1,
 form {
     text-align: center;
@@ -23,9 +34,8 @@ button {
     border-radius: 10px;
     border: none;
     background-color: #1a191b;
-    color: #f1b307;
 }
-
+/*MAIN*/
 #container {
     max-width: 500px;
     margin: auto;
@@ -43,4 +53,9 @@ button {
 .green {
     color: #5ae747;
 }
-
+/*media queries*/
+@media screen and (max-width: 620px) {
+    body {
+        padding: 1em;
+    }
+}
