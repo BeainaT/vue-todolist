@@ -21,13 +21,14 @@
                     <input type="text" placeholder="Cosa vuoi o devi fare?" v-model="target"/>
                     <button type="submit">Aggiungi</button>
                 </form>
-                <ul>
+                <ul v-if="todo.length > 0">
                     <li class="todo" v-for="(elm, index) in todo"> 
                         <div :class="{done : elm.done}" @click="elm.done = !elm.done">{{elm.text}}</div>
                         <i v-if="!elm.done" class="fa-solid fa-xmark" :class="{red : !elm.done}" @click="removeTodo(index)"></i>
                         <i v-else class="fa-solid fa-check" :class="{green : elm.done}" @click="removeTodo(index)"></i>
                     </li>
                 </ul>
+                <p v-else>Sembra che tu non abbia altro da fare!</p>
             </div>
         </main>
         <!--Vue link-->
